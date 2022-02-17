@@ -1,0 +1,50 @@
+*{
+    margin: 0;padding: 0;
+    font-family: 'fira code';
+}
+body{
+    background-color: #2e2e2e;
+}
+.container{
+    margin: 50px auto;
+    padding: 10px;
+    text-align: center;
+    width: 500px;
+    height: 400px;
+    background-color: #2e2e2e;
+    color: #fff;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: #777 0px 0px 10px;
+}
+h3{
+    font-size: 24px;
+    color: #ffee00;
+}
+.joke{
+    width: 400px;
+    height: auto;
+    margin:auto;
+    border: #777 2px;
+    border-style: dotted;
+    margin-top: 50px;
+    padding: 10px;
+}
+.jokeBtn{
+    padding: 8px 15px;
+    position: absolute;
+    bottom: 0px;
+    margin: -50px 50px 50px -50px;
+    background: transparent;
+    color: #ffee00;
+    border: #ffee00 2px solid;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+} 
+.jokeBtn:hover{
+    background-color: #ffee00;
+    color: #000;
+    transition: 0.5s ease;
+}

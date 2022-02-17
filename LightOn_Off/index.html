@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LightonOff</title>
+</head>
+<style>
+    body{
+    background-color: #222;
+    }
+    .main{
+        width: 800px;
+        height: 800px;
+        margin: auto;
+        color: white;
+        text-align: center;
+    }
+    button{
+        padding: 8px 15px;
+        background-color: #fff;
+    }
+    .img_on{
+        width: 170px;
+        height: 200px;
+    }
+</style>
+<body>
+    <div class="main">
+        <h1>Can You Turn On the Light</h1>
+
+        <button onclick="document.getElementById('Light').src='/img/Light_On.png'">Turn On</button>
+
+        <img src="/img/Light_On.png" alt="LightonOff" class="img_on" id="Light">
+
+        <button onclick="document.getElementById('Light').src='/img/Light_Off.png'">Turn Off</button>
+    </div>
+</body>
+</html>
