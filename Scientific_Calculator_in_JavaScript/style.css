@@ -1,0 +1,91 @@
+*{
+    padding: 0;margin: 0;box-sizing: border-box;
+    font-family: 'Poppins' sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ecf0f3;
+}
+.container{
+    width: 45%;
+    height: 45vh;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 12px 12px 20px #cbced1,
+                -12px -12px 20px #ffffff;
+
+}
+.display #screen{
+    width: 97%;
+    height: 70px;
+    margin-left: 10px;
+    padding-right: 20px;
+    font-size: 35px;
+    outline: none;
+    border: none;
+    text-align:right;
+    /* padding-right: .5rem; */
+    background: #ecf0f3;
+    border-radius: 6px;
+    box-shadow: inset 8px 8px 8px #cbced1,
+            inset -8px -8px 8px #ffffff;
+}
+.btns{
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.btns .row button{
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: #DEE1E3;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 8px #00000020,
+            -5px -5px 8px #ffffff;
+}
+.row button:hover{
+    box-shadow: inset 5px 5px 8px rgb(218, 218, 218,1),
+             inset -5px -5px 8px #fff;
+             background: #fff;
+}
+#backspace{
+    background-color: #5F78D3;
+    color: #ffffff;
+    box-shadow: inset 5px 5px 8px #5F78D3,
+             inset -5px -5px 8px #304CB0;
+}
+#backspace:hover{
+    box-shadow: inset 5px 5px 8px #304CB0,
+             inset -5px -5px 8px #5F78D3;
+}
+#clear{
+    background-color: #FF0A54;
+    color: #ffffff;
+    box-shadow: inset 5px 5px 8px #FF477E,
+             inset -5px -5px 8px #FF0A54;
+}
+#clear:hover{
+    box-shadow: inset 5px 5px 8px #FF0A54,
+             inset -5px -5px 8px #FF477E;
+}
+#equl{
+    background-color: #56C92C;
+    color: #ffffff;
+    box-shadow: inset 5px 5px 8px #56C92C,
+             inset -5px -5px 8px #48A725;
+}
+#equl:hover{
+    box-shadow: inset 5px 5px 8px #48A725,
+             inset -5px -5px 8px #56C92C;
+}
