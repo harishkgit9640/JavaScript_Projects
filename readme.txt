@@ -1,6 +1,7 @@
-Hello frieds,
-This is Harish, I hope you very well
+Hello friennds,
+I am Harish, from Hyderabad Telengana. I'm full stack Developer.
 
+I have Created many JavaScript Project.
 
-Team
+TEAM -
 HK SOLUTION
