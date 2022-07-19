@@ -1,0 +1,119 @@
+*{
+    margin: 0;padding: 0; box-sizing: border-box;
+    font-family: 'Poppins';
+}
+html,body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background: #f2f2f2;
+}
+.container{
+    background: #fff;
+    width: 420px;
+    padding: 20px 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+.container header{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 33px;
+}
+.container form{
+    margin: 20px 5px 10px 5px;
+
+}
+form .field{
+    height: 45px;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+form .field input{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    outline: none;
+    font-size: 17px;
+    padding-left: 15px;
+}
+form .field input:focus{
+    border-color: #27a360;
+    box-shadow: inset 0 0 3px #2fd072;
+}
+form .field .showBtn{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+}
+form .indicator{
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    display: none;
+    /* display: flex; */
+
+}
+form .indicator span{
+    width: 100%;
+    height: 100%;
+    background: lightgray;
+    border-radius: 5px;
+    position: relative;
+}
+form .indicator span.medium{
+    margin: 0 3px;
+}
+form .indicator span::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+form .indicator span.active.weak::before{
+    background-color: red;
+}
+form .indicator span.active.medium::before{
+    background-color: orange;
+}
+form .indicator span.active.strong::before{
+    background-color: green;
+}
+form .text{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: -10px;
+    display: none;
+}
+form .text.weak{
+    color: red;
+}
+form .text.medium{
+    color: orange;
+}
+form .text.strong{
+    color: green;
+}
+
+
+
+
+
+
+
+
+
+
+
