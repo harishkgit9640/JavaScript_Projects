@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Show hide buttom</title>
+    <link rel="stylesheet" href="sytle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+</head>
+<body>
+    <div class="content">
+        <div class="lock">
+            <div class="fa fa-lock"></div>
+        </div>
+        <input type="password" name="password" id="password" required placeholder="Enter your Password">
+        <span class="show-hide">
+             <i class="fa fa-eye"></i>
+        </span>
+    </div>
+
+
+    <!-- Javascript section  -->
+
+    <script>
+        const pass_field = document.querySelector("input");
+        const show_hide = document.querySelector("i");
+        show_hide.addEventListener("click", function(){
+            if(pass_field.type === "password"){
+                pass_field.type = "text";
+                show_hide.classList.add("hide");
+            }
+            else{
+                pass_field.type = "password";
+                show_hide.classList.remove("hide");
+
+                
+            }
+        });
+
+    </script>
+
+</body>
+</html>
