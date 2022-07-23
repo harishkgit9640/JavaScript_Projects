@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="sytle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-</head>
+</head>         
 <body>
 
     <div class="wrapper">
         <form action="#">
+            <input type="text" placeholder="Username" maxlength="16" required>
             <i class="fa fa-user"></i>
-            <input type="text" placeholder="Username">
             <span class="counter">16</span>
         </form>
     </div>
@@ -22,8 +22,12 @@
 
     <!-- Javascript section  -->
     <script>
-
-
+        const input = document.querySelector("form input");
+        const counter = document.querySelector("form .counter");
+        const maxlength = input.getAttribute("maxlength");
+        input.onkeyup = () =>{
+            counter.innerText = maxlength - input.value.length;
+        }
     </script>
 
 </body>

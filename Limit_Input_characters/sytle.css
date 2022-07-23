@@ -17,7 +17,8 @@ body{
     border-radius: 5px;
 }
 .wrapper form{
-    height: 50px;
+    position: relative;
+    height: 55px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -28,17 +29,41 @@ form i{
     width: 55px;
     text-align: center;
     font-size: 22px;
-    color: #58cff1;
+    color: #4c4c4c;
+    pointer-events: none; 
+}
+
+form input:valid ~ i{
+    color: #56e2d7;
+}
+
+form input:focus,
+form input:valid{
+    border-color: #56e2d7;
 }
 form input{
     height: 100%;
     width: 100%;
     border: 2px solid #ddd;
     border-radius: 5px;
-    padding: 0 50px 0 45px;
+    padding: 0 55px 0 45px;
     outline: none;
     font-size: 20px;
+    transition: all 0.3s ease;
 }
 form input::placeholder{
     color: #4c4c4c;
+}
+form .counter{
+    position: absolute;
+    right: 4px;
+    width: 50px;
+    text-align: center;
+    font-size: 22px;
+    color: #4c4c4c;
+    pointer-events: none; 
+    border-left: solid 2px #d8d8dd;
+}
+form input:valid ~ .counter{
+    color: #56e2d7;
 }
