@@ -1,26 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Slider</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
     <div class="wrapper">
         <div class="img_box">
-            <img src="img_ (1).jpg" alt="slider_images">
-            <img src="img_ (2).jpg" alt="slider_images">
-            <img src="img_ (3).jpg" alt="slider_images">
-            <img src="img_ (4).jpg" alt="slider_images">
+            <div class="slide img1" ><img src="img_ (4).jpg" ></div>
+            <div class="slide"><img src="img_ (2).jpg" ></div>
+            <div class="slide"><img src="img_ (4).jpg" ></div>
+            <div class="slide"><img src="img_ (2).jpg" ></div>
+            <div class="slide"><img src="img_ (5).jpg" ></div>
+            <div class="slide"><img src="img_ (2).jpg" ></div>
+
         </div>
         <div class="buttons">
-            <a href="#" class="btn1"></a>
+            <a href="#" class="btn1 active"></a>
             <a href="#" class="btn2"></a>
             <a href="#" class="btn3"></a>
             <a href="#" class="btn4"></a>
+            <a href="#" class="btn5"></a>
+            <a href="#" class="btn6"></a>
         </div>
     </div>
+
+    <script>
+
+        $(document).ready(function () {
+            $('.btn1').click(function () {
+                $('.img1').css("marginLeft", "0");
+            });
+            $('.btn2').click(function () {
+                $('.img1').css("marginLeft", "-20%");
+            });
+            $('.btn3').click(function () {
+                $('.img1').css("marginLeft", "-40%");
+            });
+            $('.btn4').click(function () {
+                $('.img1').css("marginLeft", "-60%");
+            });
+            $('.btn5').click(function () {
+                $('.img1').css("marginLeft", "-80%");
+            });
+            $('a').click(function(){
+                $(this).addClass ('active').siblings()
+                    .removeClass('active');
+            });
+        });
+
+
+    </script>
+
 </body>
+
 </html>

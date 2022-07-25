@@ -5,10 +5,11 @@
 .wrapper{
     position: absolute;
     width: 800px;
-    height: 500px;
+    height: 450px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    overflow: hidden;
 
 }
 .wrapper .img_box{
@@ -16,10 +17,13 @@
     width: 500%;
     height: 100%;
 }
-.wrapper .img_box img{
+.img_box .slide{
+    width: 20%;
+    transition: .6s;
+}
+.img_box img{
     width: 100%;
     height: 100%;
-
 }
 .wrapper .buttons{
     position: absolute;
@@ -34,4 +38,16 @@
     border: 2px solid #fff;
     margin: 0 8px;
     border-radius: 10px;
+}
+a.active{
+    transition: 0.5s;
+    transform: scale(0.999);
+    background: white;
+    animation: animate .4s;
+
+}
+@keyframes animate {
+    100%{
+        transform: scale(0.8);
+    }
 }
