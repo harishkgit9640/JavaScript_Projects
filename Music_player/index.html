@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="top_bar">
+            <i class="fa-solid fa-chevron-down"></i>
+            <span>Music Player</span>
+            <i class="fa-solid fa-ellipsis"></i>
+        </div>
+        <div class="img_area">
+            <img src="" alt="music img">
+        </div>
+        <div class="song_details">
+            <p class="name">Dil me ho tum - Mr. harish</p>
+            <p class="artist">Arijit singh & Royal</p>
+        </div>
+        <div class="progress_area">
+            <div class="progress_bar">
+            </div>
+            <div class="timer">
+                <span class="current">0.20</span>
+                <span class="current">3.25</span>
+            </div>
+            <audio id="main-audio" src=""></audio>
+        </div>
+
+        <div class="controls">
+            <i id="repeat" class="fa-solid fa-repeat"></i>
+            <i id="prev" class="fa-solid fa-backward-step"></i>
+            <div class="play_pause">
+                <i class="fa-solid fa-play"></i>
+                <!-- <i id="" class="fa-solid fa-pause"></i> -->
+            </div>
+            <i id="next" class="fa-solid fa-forward-step"></i>
+            <i id="more_music" class="fa-solid fa-bars"></i>
+        </div>
+
+        <div class="music_list">
+            <div class="header">
+                <div class="row">
+                    <i class="fa-solid fa-bars"></i>
+                    <span>Music List</span>
+                </div>
+                <i id="" class="fa-solid fa-xmark"></i>
+            </div>
+            <ul>
+                <li>
+                    <div class="row">
+                        <span>dil me ho tum - Harish</span>
+                        <p>Audio library</p>
+                    </div>
+                    <span class="duration">3:50</span>
+                </li>
+
+                <li>
+                    <div class="row">
+                        <span>dil me ho tum - Harish</span>
+                        <p>Audio library</p>
+                    </div>
+                    <span class="duration">3:50</span>
+                </li>
+
+                <li>
+                    <div class="row">
+                        <span>dil me ho tum - Harish</span>
+                        <p>Audio library</p>
+                    </div>
+                    <span class="duration">3:50</span>
+                </li>
+
+                <li>
+                    <div class="row">
+                        <span>dil me ho tum - Harish</span>
+                        <p>Audio library</p>
+                    </div>
+                    <span class="duration">3:50</span>
+                </li>
+                <li>
+                    <div class="row">
+                        <span>dil me ho tum - Harish</span>
+                        <p>Audio library</p>
+                    </div>
+                    <span class="duration">3:50</span>
+                </li>
+
+                <li>
+                    <div class="row">
+                        <span>dil me ho tum - Harish</span>
+                        <p>Audio library</p>
+                    </div>
+                    <span class="duration">3:50</span>
+                </li>
+
+                <li>
+                    <div class="row">
+                        <span>dil me ho tum - Harish</span>
+                        <p>Audio library</p>
+                    </div>
+                    <span class="duration">3:50</span>
+                </li>
+            </ul>
+        </div>
+        <script src="script.js"></script>
+        <script src="music_list.js"></script>
+</body>
+
+</html>
