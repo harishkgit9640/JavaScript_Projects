@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image SlideShow Animation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+        <div class="images">
+            <img src="image/img_ (1).jpg" alt="">
+            <img src="image/img_ (3).jpg" alt="">
+            <img src="image/img_ (4).jpg" alt="">
+            <img src="image/img_ (2).jpg" alt="">
+            <img src="image/img_ (5).jpg" alt="">
+        </div>
+    </div>
+
+    <script>
+
+        var indexValue = 0;
+        function SlideShow(){
+            setTimeout(SlideShow , 2000);
+            var x;
+            const img = document.querySelectorAll("img");
+            for (x = 0; x < img.length; x++) {
+                img[x].style.display = "none";
+            }
+            indexValue++;
+            if(indexValue > img.length){indexValue = 1}
+            img[indexValue -1].style.display = "block";
+        }
+        SlideShow();
+
+    </script>
+</body>
+</html>

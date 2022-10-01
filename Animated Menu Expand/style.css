@@ -1,0 +1,70 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body{
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #060a1f;
+}
+nav{
+    position: relative;
+    width: 730px;
+    height: 80px;
+    border-radius: 5px;
+    border:  1px solid #080e2b;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+nav::before{
+    position: absolute;
+    content: "MENU";
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    left: 45%;
+    transform: translateX(-40);
+    line-height: 80px;
+    background: #080e2b;
+    padding: 0px 15px;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    list-style: none;
+}
+nav ul a{
+    color: #fff;
+    /* margin: 0 10px; */
+    font-size: 24px;
+    text-decoration: none;
+    /* padding: 10px 15px; */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+nav ul a:hover, ul a.active{
+    background: #0c1540;
+}
+nav._expand{
+    width: 730px;
+}
+nav._expand ul a{
+    margin: 0 10px;
+    padding: 10px 15px;
+    pointer-events: auto;
+    opacity: 1;
+}
+nav._expand::before{
+    opacity: 0;
+    pointer-events: none;
+}
