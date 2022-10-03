@@ -10,23 +10,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.3.2/countUp.min.js"
         integrity="sha512-qPQega4nO7+N8XzGLxc9xnbJQMOZ3Fury2rBGQPDBJYOZaX71sFj0rBJws8KFrlSRI+7FYkVBsoOFTSME+xlaA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
 </head>
 
 <body>
     <div class="circular">
         <div class="inner">
-            <span class="counter">100%</span>
+            <span id="span">0</span>
         </div>
     </div>
     </div>
 
     <script>
-        $('.counter').counterUp({
-            delay: 1000,
-            time: 200000
-        });
-        $('.counter').addClass('animated fadeInDownBig');
+        let counter = 0;
+        setInterval(() => {
+            if (counter == 100) {
+                clearInterval()
+            } else {
+                counter += 1;
+            }
+            $('#span').html(counter + "%");
+        }, 80);
     </script>
 </body>
 
