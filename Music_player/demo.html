@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <title>Dark Mode</title>
+
+    <style>
+        html,
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box {
+            width: 150px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background: #ddd;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .box.active {
+            background: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="box"> Light Mode </button>
+
+    <script>
+        $(document).ready(function () {
+            $('.box').click(function () {
+                $('.box').toggleClass('active');
+                if ($(this).text() == "Dark Mode ⚪") {
+                    $(this).text("Light Mode ⚫")
+                    $('body').css('backgroundColor', '#000');
+                } else {
+                    $(this).text("Dark Mode ⚪")
+                    $('body').css('backgroundColor', '#FFF');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
