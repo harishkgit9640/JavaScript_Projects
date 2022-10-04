@@ -36,4 +36,4 @@ let music_list = [
         img: "img_ (6)",
         src: "music- (6)"
     },
-]
+];

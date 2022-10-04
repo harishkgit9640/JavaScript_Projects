@@ -11,7 +11,10 @@ const wrapper = document.querySelector(".wrapper"),
     nextBtn = wrapper.querySelector("#next"),
     progressBar = wrapper.querySelector(".progress_bar"),
     progressArea = wrapper.querySelector(".progress_area"),
-    playLoop = wrapper.querySelector('#repeat');
+    repeatBtn = wrapper.querySelector('#repeat'),
+    musicList = wrapper.querySelector('.musicList'),
+    moreBtn = wrapper.querySelector('#more_music'),
+    hideBtn = wrapper.querySelector('#close');
 
 
 let musicIndex = 2;
@@ -119,10 +122,32 @@ progressArea.addEventListener('click', (e) => {
 });
 
 
-// repeat, shuffle song according to the icon
-
-const repeatBtn = wrapper.querySelector('#repeat');
-
+// repeat, shuffle, one song according to the icon
 repeatBtn.addEventListener('click', () => {
     playLoop.classList.add('repeat');
 });
+
+
+// Music List logic
+moreBtn.addEventListener('click', () => {
+    musicList.classList.toggle('show')
+});
+hideBtn.addEventListener('click', () => {
+    moreBtn.click();
+});
+
+const ulTag = document.querySelector('ul');
+
+for (let i = 0; i <= music_list.length; i++) {
+    console.log(music_list[i]);
+
+    // let liTag = ` <li>
+    //             <div class="row">
+    //                 <span>hk</span>
+    //                 <p>Audio library</p>
+    //             </div>
+    //             <span class="duration">3:50</span>
+    //             </li> `;
+    // ulTag.insertAdjacentHTML('beforeend', liTag);
+
+}
