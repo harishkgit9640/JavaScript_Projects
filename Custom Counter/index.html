@@ -27,7 +27,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
         width: 350px;
         height: 250px;
         border: 2px solid #000;
@@ -36,6 +36,7 @@
     }
 
     .btn {
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -49,12 +50,13 @@
     }
 
     button {
-        padding: 10px 20px;
+        padding: 10px 40px;
         outline: none;
         border: 2px solid crimson;
         background: transparent;
         color: crimson;
         border-radius: 5px;
+        font-weight: 600;
 
     }
 
@@ -68,31 +70,62 @@
 
     <div class="wrapper">
         <h1>Custom Counter</h1>
-        <h1 id="counter">0</h1>
+        <h1 id="counter">10</h1>
         <div class="btn">
             <button id="down">➖</button>
             <button id="up">➕</button>
         </div>
+        <div class="btn">
+            <button id="Reset">Reset</button>
+            <button id="countDown">Count Down</button>
+        </div>
+
     </div>
 
     <script>
-        $(document).ready(function () {
-            let counter = 0;
-            $('#down').click(function () {
-                $('#counter').html(counter--);
-                if (counter < 0) {
-                    counter = 0;
-                }
-            });
-            $('#up').click(function () {
-                if ((counter >= 0) && (counter <= 9)) {
-                    $('#counter').html("0" + counter++);
-
+        let counter = 00;
+        $('#down').click(function () {
+            $('#counter').html(counter--);
+            if (counter < 00) {
+                counter = 00;
+                alert('counter is out of range')
+                $('#counter').html(counter);
+            } else {
+                if ((counter >= 00) && (counter <= 9)) {
+                    $('#counter').html("0" + counter);
                 } else {
-                    $('#counter').html(counter++);
+                    $('#counter').html(counter);
                 }
-            });
+            }
         });
+        $('#up').click(function () {
+            if ((counter >= 00) && (counter <= 9)) {
+                $('#counter').html("0" + counter++);
+
+            } else {
+                $('#counter').html(counter++);
+            }
+        });
+
+
+        $('#countDown').click(function () {
+            setInterval(() => {
+                $('#counter').html(counter--);
+                if (counter < 00) {
+                    counter = 00;
+                    $('#counter').html(counter);
+                } else {
+                    if ((counter >= 00) && (counter <= 9)) {
+                        $('#counter').html("0" + counter);
+                    } else {
+                        $('#counter').html(counter);
+                    }
+                }
+            }, 100);
+        });
+
+
+
     </script>
 </body>
 
