@@ -6,8 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Counter</title>
+    <script src='https://code.jquery.com/jquery-3.6.1.js'></script>
 </head>
 <style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
+    }
+
     body {
         height: 100vh;
         display: flex;
@@ -16,8 +24,12 @@
     }
 
     .wrapper {
-        width: 250px;
-        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 350px;
+        height: 250px;
         border: 2px solid #000;
         padding: 15px;
         border-radius: 5px;
@@ -56,15 +68,31 @@
 
     <div class="wrapper">
         <h1>Custom Counter</h1>
-        <h1>00</h1>
+        <h1 id="counter">0</h1>
         <div class="btn">
-            <button class="down">➖</button>
-            <button class="up">➕</button>
+            <button id="down">➖</button>
+            <button id="up">➕</button>
         </div>
     </div>
 
     <script>
+        $(document).ready(function () {
+            let counter = 0;
+            $('#down').click(function () {
+                $('#counter').html(counter--);
+                if (counter < 0) {
+                    counter = 0;
+                }
+            });
+            $('#up').click(function () {
+                if ((counter >= 0) && (counter <= 9)) {
+                    $('#counter').html("0" + counter++);
 
+                } else {
+                    $('#counter').html(counter++);
+                }
+            });
+        });
     </script>
 </body>
 
