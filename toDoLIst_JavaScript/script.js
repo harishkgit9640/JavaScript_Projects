@@ -8,16 +8,24 @@ let resetBtn = $('#restTask');
 let delBtn = $('#clearTask');
 
 
+
+
 function addItem() {
-    let listItem = $('<li>', {
-        'class': 'list-group-item list-group-item-primary',
-        text: inpNewTask.val()
-    });
-    listItem.click((event) => {
-        listItem.toggleClass('done');
-    });
-    ulTask.append(listItem)
-    inpNewTask.val('');
+    if (inpNewTask == "") {
+        alert("Please Enter a new task");
+    } else {
+
+        let listItem = $('<li>', {
+            'class': 'list-group-item list-group-item-primary',
+            text: inpNewTask.val()
+        });
+        listItem.click((event) => {
+            listItem.toggleClass('done');
+        });
+        ulTask.append(listItem)
+        inpNewTask.val('');
+    }
+
 }
 
 function clearDone() {
